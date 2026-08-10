@@ -6,7 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	// 上线后改成你的正式域名（如 https://yourname.com），RSS/sitemap 才能生成正确的绝对链接
+	site: 'https://yourname.pages.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{

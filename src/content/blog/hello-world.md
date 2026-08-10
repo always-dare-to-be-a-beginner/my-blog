@@ -1,8 +1,7 @@
 ---
 title: "你好，世界"
-date: 2026-08-10
 description: "这是用 Astro + Cloudflare Pages 在本机一键支棱起来的第一篇博客。"
-tags: ["随笔"]
+pubDate: 'Aug 10 2026'
 ---
 
 这是我的第一篇博客，由 **小王八** 帮老板在本机直接跑起来的。
