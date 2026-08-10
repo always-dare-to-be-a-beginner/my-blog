@@ -35,3 +35,8 @@ npm run build    # 产出 dist/，可交给任意静态托管
 ## 提示
 - `astro.config.mjs` 里的 `site` 改成你的正式域名，RSS / sitemap 才会生成绝对链接
 - 想脱离 Git 在网页后台写文章，可接 Decap CMS 或 Astro Studio
+
+## 排错：构建报 `bun run build failed`
+Cloudflare Pages 靠锁文件判断包管理器：仓库里**没有 `package-lock.json`** 时会默认用 bun，跑 `bun run build` 导致构建失败。
+- 修法：确保 `package-lock.json` 已提交进仓库（本项目已提交），并在 Cloudflare 项目 **Settings → Build & deployments** 把 Build command 显式设为 `npm run build`（输出目录 `dist`）。
+- 若控制台菜单改名/找不到，直接 `git push` 任意改动即可触发一次新构建来复现/验证。
